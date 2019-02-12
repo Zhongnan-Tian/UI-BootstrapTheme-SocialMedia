@@ -1,6 +1,6 @@
 body {
   /* position: relative;
-  margin-top: 70px; */
+  margin-top: 60px; */
   background: #333;
   color: #fff;
 }
@@ -8,4 +8,37 @@ body {
 .navbar {
   border-bottom: #008ed6 3px solid;
   opacity: 0.8;
+}
+
+#home-section {
+  /* padding-top: 150px; doens't work here. work for .home-inner. code below*/
+  background: url(../img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* image fixed position */
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#home-section .home-inner {
+  padding-top: 150px; /*top won't be hidden by navbar*/
+}
+
+#home-section .card {
+  opacity: 0.8;
+}
+
+#home-section .fas {
+  color: #008ed6;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
 }
