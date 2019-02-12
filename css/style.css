@@ -1,0 +1,11 @@
+body {
+  /* position: relative;
+  margin-top: 70px; */
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #008ed6 3px solid;
+  opacity: 0.8;
+}
