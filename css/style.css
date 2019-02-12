@@ -12,9 +12,10 @@ body {
 
 #home-section {
   /* padding-top: 150px; doens't work here. work for .home-inner. code below*/
-  background: url(../img/home.jpg);
+  background: url(../img/home-section.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed; /* image fixed position */
   min-height: 700px;
 }
@@ -29,7 +30,7 @@ body {
 }
 
 #home-section .home-inner {
-  padding-top: 150px; /*top won't be hidden by navbar*/
+  padding-top: 130px; /*top won't be hidden by navbar*/
 }
 
 #home-section .card {

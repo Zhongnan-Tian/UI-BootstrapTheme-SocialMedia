@@ -27,7 +27,9 @@
       class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark"
     >
       <div class="container">
-        <a href="index.html" class="navbar-brand">LoopUS</a>
+        <a href="index.html" class="navbar-brand"
+          ><i class="fab fa-connectdevelop fa-lg mr-2"></i>LoopUS</a
+        >
         <button
           class="navbar-toggler"
           data-toggle="collapse"
@@ -168,7 +170,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="img/explore-section1.jpg"
+              src="img/explore-section.jpg"
               alt=""
               class="img-fluid rounded-circle mb-3"
             />
@@ -202,7 +204,7 @@
       </div>
     </section>
 
-    <section id="creat-head-section" class="bg-primary">
+    <section id="create-head-section">
       <div class="container">
         <div class="row">
           <div class="col text-center py-5">
@@ -218,12 +220,12 @@
       </div>
     </section>
 
-    <section id="create-section" class="py-5">
+    <section id="create-section" class="py-5 bg-secondary">
       <div class="container">
         <div class="row">
           <div class="col-md-6 order-2">
             <img
-              src="img/create-section1.jpg"
+              src="img/create-section.jpg"
               alt=""
               class="img-fluid rounded-circle mb-3"
             />
@@ -280,7 +282,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="img/share-section1.jpg"
+              src="img/share-section.jpg"
               alt=""
               class="img-fluid rounded-circle mb-3"
             />
@@ -346,6 +348,50 @@
     <script>
       // Get the current year for the copyright
       $('#year').text(new Date().getFullYear());
+
+      //scrolling
+      $('body').scrollspy({ target: '#main-nav' });
+      // Add smooth scrolling
+      $('#main-nav a').on('click', function(e) {
+        if (this.hash !== '') {
+          // e.preventDefault();
+
+          // var $this = $(this);
+          // var elAttr = $this.attr('href');
+          // var offset = $this.attr('data-offset')
+          //   ? $this.attr('data-offset')
+          //   : 0;
+          // var fixedTop = $('.navbar.fixed-top');
+
+          // if (fixedTop && fixedTop.length) {
+          //   offset = fixedTop.outerHeight();
+          // }
+
+          // $('html, body').animate(
+          //   {
+          //     scrollTop: $(elAttr).offset().top - offset
+          //   },
+          //   900
+          // );
+
+          e.preventDefault();
+
+          // Store hash
+          const hash = this.hash;
+
+          // Animate smooth scroll
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            900,
+            function() {
+              // Add hash to URL after scroll
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
     </script>
   </body>
 </html>
